@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ECS">
+      <UniqueIdentifier>{60E1870B-CCEA-877C-5566-9E7CC16E937C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ECS\ComponentManager">
+      <UniqueIdentifier>{5D4ADB5A-49D9-6424-F2F7-781FDE6575CA}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EntryPoint">
+      <UniqueIdentifier>{419769CF-2D4F-AB1C-9656-8478822D460D}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{010A8043-6D74-34BA-B6B2-E55F225C120F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Logger">
+      <UniqueIdentifier>{B0B45EAD-9CAD-7DFF-C5DF-6284B1375D0B}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\MemoryHandler">
+      <UniqueIdentifier>{A7FBAF85-1333-F81C-1C3D-5C4088F31E16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="precompiled">
+      <UniqueIdentifier>{B96624CA-251C-9DBF-AE10-97961AC593C3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ECS\ComponentManager\ComponentManager.h">
+      <Filter>ECS\ComponentManager</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EntryPoint\EntryPoint.h">
+      <Filter>EntryPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utilities\Logger\Logger.h">
+      <Filter>Utilities\Logger</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Utilities\MemoryHandler\MemoryHandler.h">
+      <Filter>Utilities\MemoryHandler</Filter>
+    </ClInclude>
+    <ClInclude Include="src\precompiled\pch.hpp">
+      <Filter>precompiled</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\ECS\ComponentManager\ComponentManager.cpp">
+      <Filter>ECS\ComponentManager</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EntryPoint\EntryPoint.cpp">
+      <Filter>EntryPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utilities\Logger\Logger.cpp">
+      <Filter>Utilities\Logger</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Utilities\MemoryHandler\MemoryHandler.cpp">
+      <Filter>Utilities\MemoryHandler</Filter>
+    </ClCompile>
+    <ClCompile Include="src\precompiled\pch.cpp">
+      <Filter>precompiled</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
