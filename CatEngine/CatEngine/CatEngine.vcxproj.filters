@@ -39,6 +39,9 @@
     <ClInclude Include="src\precompiled\pch.hpp">
       <Filter>precompiled</Filter>
     </ClInclude>
+    <ClInclude Include="src\Utilities\SparseSet\SparseSet.hpp" />
+    <ClInclude Include="src\Global.h" />
+    <ClInclude Include="src\Application\Application.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ECS\ComponentManager\ComponentManager.cpp">
@@ -56,5 +59,6 @@
     <ClCompile Include="src\precompiled\pch.cpp">
       <Filter>precompiled</Filter>
     </ClCompile>
+    <ClCompile Include="src\Application\Application.cpp" />
   </ItemGroup>
 </Project>
