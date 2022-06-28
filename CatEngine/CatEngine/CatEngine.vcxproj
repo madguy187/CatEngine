@@ -98,7 +98,7 @@
     <ClInclude Include="src\Utilities\Logger\Logger.h" />
     <ClInclude Include="src\Utilities\MemoryHandler\MemoryHandler.h" />
     <ClInclude Include="src\precompiled\pch.hpp" />
-    <ClInclude Include="src\Utilities\SparseSet\SparseSet.h" />
+    <ClInclude Include="src\Utilities\SparseSet\SparseSet.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application\Application.cpp" />
@@ -109,7 +109,6 @@
     <ClCompile Include="src\precompiled\pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="src\Utilities\SparseSet\SparseSet.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
