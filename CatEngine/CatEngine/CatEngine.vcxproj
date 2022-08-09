@@ -92,17 +92,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\Application\Application.h" />
-    <ClInclude Include="src\ECS\ComponentManager\ComponentManager.h" />
+    <ClInclude Include="src\ECS\ComponentManager\ComponentArray\ComponentArray.h" />
+    <ClInclude Include="src\ECS\ComponentManager\ComponentBase\ComponentBase.hpp" />
+    <ClInclude Include="src\ECS\ComponentManager\ComponentList.hpp" />
+    <ClInclude Include="src\ECS\ComponentManager\ComponentManager.hpp" />
+    <ClInclude Include="src\ECS\EntityManager\EntityManager.h" />
     <ClInclude Include="src\EntryPoint\EntryPoint.h" />
     <ClInclude Include="src\Global.h" />
     <ClInclude Include="src\Utilities\Logger\Logger.h" />
     <ClInclude Include="src\Utilities\MemoryHandler\MemoryHandler.h" />
     <ClInclude Include="src\precompiled\pch.hpp" />
     <ClInclude Include="src\Utilities\SparseSet\SparseSet.hpp" />
+    <ClInclude Include="src\Utilities\TypeID\TypeID.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Application\Application.cpp" />
-    <ClCompile Include="src\ECS\ComponentManager\ComponentManager.cpp" />
+    <ClCompile Include="src\ECS\EntityManager\EntityManager.cpp" />
     <ClCompile Include="src\EntryPoint\EntryPoint.cpp" />
     <ClCompile Include="src\Utilities\Logger\Logger.cpp" />
     <ClCompile Include="src\Utilities\MemoryHandler\MemoryHandler.cpp" />

@@ -4,6 +4,7 @@ namespace CEngine
 {
 	class Application
 	{
+
 	public:
 		void Init();
 		void MainLoop();

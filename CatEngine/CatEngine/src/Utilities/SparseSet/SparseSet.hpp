@@ -6,7 +6,6 @@ namespace CEngine
 {
 	class SparseSet
 	{
-#define NOT_USED MAX_SIZE + 1
 		size_t* dense = nullptr;
 		size_t* sparse = nullptr;
 		size_t n = 0;
@@ -16,7 +15,7 @@ namespace CEngine
 		{
 			dense = new size_t[MAX_SIZE];
 			sparse = new size_t[MAX_SIZE];
-			std::fill(sparse, sparse + MAX_SIZE, NOT_USED);
+			std::fill(sparse, sparse + MAX_SIZE, MAX_SIZE);
 		}
 
 		~SparseSet()
@@ -25,34 +24,49 @@ namespace CEngine
 			delete[] sparse;
 		}
 
-		void Insert(size_t newValue)
+		size_t Insert(Entity newValue)
 		{
-			if (n > MAX_SIZE) return;
-			if (Search(newValue) != NOT_USED) return;
+			if (n >= MAX_SIZE) return MAX_SIZE;
+			if (Search(newValue) != MAX_SIZE) return MAX_SIZE;
 			dense[n] = newValue;
 			sparse[newValue] = n;
-			n++;
+			return n++;
 		}
 
-		size_t Search(size_t index)
+		size_t Search(Entity index)
 		{
-			if (index >= MAX_SIZE) return NOT_USED;
+			if (index >= MAX_SIZE) return MAX_SIZE;
 			if (sparse[index] < n && dense[sparse[index]] == index) return sparse[index];
-			return NOT_USED;
+			return MAX_SIZE;
 		}
 
-		void Delete(size_t index)
+		size_t Delete(Entity index)
 		{
-			if (Search(index) == NOT_USED) return;
+			if (Search(index) == MAX_SIZE) return MAX_SIZE;
 			std::swap(dense[sparse[index]], dense[n - 1]);
 			sparse[n - 1] = index;
-			sparse[index] == NOT_USED;
-			n--;
+			sparse[index] = MAX_SIZE;
+			return --n;
 		}
+
 		void Clear()
 		{
-			std::fill(sparse, sparse + MAX_SIZE, NOT_USED);
 			n = 0;
+		}
+
+		void Dump()
+		{
+			for (int i = 0; i < n; i++)
+			{
+				std::cout << sparse[i] << " ";
+			}
+			std::cout << std::endl;
+
+			for (int i = 0; i < n; i++)
+			{
+				std::cout << dense[i] << " ";
+			}
+			std::cout << std::endl;
 		}
 	};
 }

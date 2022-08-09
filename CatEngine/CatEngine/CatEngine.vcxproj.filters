@@ -24,7 +24,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\ECS\ComponentManager\ComponentManager.h">
+    <ClInclude Include="src\ECS\ComponentManager\ComponentManager.hpp">
       <Filter>ECS\ComponentManager</Filter>
     </ClInclude>
     <ClInclude Include="src\EntryPoint\EntryPoint.h">
@@ -42,11 +42,13 @@
     <ClInclude Include="src\Utilities\SparseSet\SparseSet.hpp" />
     <ClInclude Include="src\Global.h" />
     <ClInclude Include="src\Application\Application.h" />
+    <ClInclude Include="src\ECS\ComponentManager\ComponentArray\ComponentArray.h" />
+    <ClInclude Include="src\Utilities\TypeID\TypeID.hpp" />
+    <ClInclude Include="src\ECS\ComponentManager\ComponentBase\ComponentBase.hpp" />
+    <ClInclude Include="src\ECS\EntityManager\EntityManager.h" />
+    <ClInclude Include="src\ECS\ComponentManager\ComponentList.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\ECS\ComponentManager\ComponentManager.cpp">
-      <Filter>ECS\ComponentManager</Filter>
-    </ClCompile>
     <ClCompile Include="src\EntryPoint\EntryPoint.cpp">
       <Filter>EntryPoint</Filter>
     </ClCompile>
@@ -60,5 +62,6 @@
       <Filter>precompiled</Filter>
     </ClCompile>
     <ClCompile Include="src\Application\Application.cpp" />
+    <ClCompile Include="src\ECS\EntityManager\EntityManager.cpp" />
   </ItemGroup>
 </Project>
