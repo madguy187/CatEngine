@@ -22,5 +22,10 @@ namespace CEngine
 			static unsigned const id = _counter++;
 			return id;
 		}
+
+		static unsigned GetSize()
+		{
+			return _counter;
+		}
 	};
 }

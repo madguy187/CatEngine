@@ -13,6 +13,19 @@ namespace CEngine
 		std::vector<ComponentBase> m_componentArray;
 		TypeID<IComponentArray> typeID;
 	public:
+		template <typename T>
+		inline const unsigned GetComponentIndex() { return typeID.GetID<T>(); }
+
+		void DestroyBySignature(Entity ent, Signature signature)
+		{
+			for (unsigned i = 0; i < MAX_COMPONENT; i++) {
+				if (signature[i]) {
+					ComponentBase& base = m_componentArray[i];
+					base.Delete(*base._container, ent);
+				}
+			}
+		}
+
 		template<typename T>
 		void RegisterComponent()
 		{
@@ -56,7 +69,6 @@ namespace CEngine
 		void DeleteComponent(Entity ent) {
 			auto& base = m_componentArray[typeID.GetID<T>()];
 			base.Delete(*base._container, ent);
-			std::cout << "deleted: 5" << std::endl;
 			static_cast<ComponentArray<T>&>(*base._container).Dump();
 		}
 	};

@@ -53,20 +53,5 @@ namespace CEngine
 		{
 			n = 0;
 		}
-
-		void Dump()
-		{
-			for (int i = 0; i < n; i++)
-			{
-				std::cout << sparse[i] << " ";
-			}
-			std::cout << std::endl;
-
-			for (int i = 0; i < n; i++)
-			{
-				std::cout << dense[i] << " ";
-			}
-			std::cout << std::endl;
-		}
 	};
 }

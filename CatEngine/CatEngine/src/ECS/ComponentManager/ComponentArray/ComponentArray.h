@@ -39,9 +39,5 @@ namespace CEngine
 		void Clear() {
 			m_Sset.Clear();
 		}
-
-		void Dump() {
-			m_Sset.Dump();
-		}
 	};
 }

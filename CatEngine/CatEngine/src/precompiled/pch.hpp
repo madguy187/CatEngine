@@ -5,11 +5,14 @@
 #define CENGINE_ERROR(x) spdlog::error(x);
 
 #include <iostream>
+#include <assert.h>
 
 #include <vector>
 #include <array>
 #include <stack>
 #include <string>
+#include <bitset>
+#include <set>
 
 #include <ctime>
 #include <stdlib.h>
@@ -19,6 +22,8 @@
 #include <algorithm>
 #include <type_traits>
 #include <utility>
+
+#include "EntryPoint/EntryPoint.h"
 
 #include "Utilities/MemoryHandler/MemoryHandler.h"
 #include "spdlog/spdlog.h"

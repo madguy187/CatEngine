@@ -13,21 +13,22 @@ namespace CEngine
 			i--;
 		}
 
-		count = 0;
+		m_count = 0;
 	}
 
 	Entity EntityManager::CreateEntity()
 	{
 		Entity ent = m_stack.top();
 		m_stack.pop();
-		count++;
+		m_count++;
 		return ent;
 	}
 
 	void EntityManager::DeleteEntity(Entity ent)
 	{
 		m_stack.push(ent);
-		count--;
+		m_entitySignatures[ent].reset();
+		m_count--;
 	}
 
 	void EntityManager::Clear()
@@ -35,6 +36,11 @@ namespace CEngine
 		while (!m_stack.empty())
 			m_stack.pop();
 
-		count = 0;
+		m_count = 0;
+	}
+
+	void EntityManager::ChangeSignature(Entity ent, unsigned index, bool value)
+	{
+		m_entitySignatures[ent].set(index, value);
 	}
 }
